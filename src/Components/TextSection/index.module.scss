@@ -1,0 +1,17 @@
+@import "../../scss/config";
+
+.block {
+  @include make-spacer('px', 11);
+
+  display: grid;
+  grid-template-columns: 171px 1fr 191px;
+  align-items: center;
+  border-top: 2px solid var(--color-dark);
+  border-bottom: 2px solid var(--color-dark);
+  height: 140px;
+  text-align: center;
+}
+
+.text {
+  @include make-spacer('px', 4);
+}

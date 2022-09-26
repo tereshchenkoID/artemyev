@@ -1,0 +1,39 @@
+@import "../../scss/config";
+
+.top,
+.bottom,
+.wrapper {
+  position: relative;
+  background-color: var(--color-light-900);
+}
+
+.top {
+  @include flex(center, center);
+
+  height: 86px;
+
+  .decor {
+    @include absolute-center-left(65px);
+  }
+}
+
+.bottom {
+  @include make-spacer('px', 13);
+
+  border-top: 2px solid var(--color-dark);
+  height: 129px;
+}
+
+.wrapper {
+  @include size(100%);
+
+  display: grid;
+  grid-template-columns: 350px 1fr 550px;
+  align-items: center;
+  text-align: center;
+  font-size: 12px;
+}
+
+.back {
+  @include absolute-center-right(315px);
+}

@@ -1,7 +1,0 @@
-@import "../../scss/config";
-
-.block {
-  @include make-spacer('mx', auto);
-
-  max-width: var(--max-width);
-}
