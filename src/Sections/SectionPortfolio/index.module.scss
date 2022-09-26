@@ -1,0 +1,59 @@
+@import "../../scss/config";
+
+.header,
+.footer {
+  position: relative;
+  border-top: 2px solid var(--color-dark);
+  border-bottom: 2px solid var(--color-dark);
+  background-color: var(--color-light-900);
+  overflow: hidden;
+}
+
+.header {
+  @include make-spacer('px', 12);
+  @include flex($align-items: center);
+
+  height: 160px;
+
+  .pattern {
+    top: 0;
+  }
+}
+
+.footer {
+  height: 76px;
+
+  .pattern {
+    bottom: 0;
+  }
+}
+
+.decor {
+  @include flex($align-items: center);
+  @include make-spacer('px', 12);
+
+  border-bottom: 2px solid var(--color-dark);
+  height: 104px;
+}
+
+.pattern {
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  svg {
+    width: 100%;
+  }
+}
+
+.subtitle {
+  @include flex(space-between, center);
+  @include make-spacer('px', 14);
+
+  height: 32px;
+  font-size: 14px;
+}
+
+.item {
+  border-top: 2px solid var(--color-dark);
+}

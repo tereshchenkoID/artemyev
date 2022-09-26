@@ -1,0 +1,30 @@
+@import "../../scss/config";
+
+.block {
+  @include flex($align-items: center);
+
+  overflow: hidden;
+  height: 100%;
+}
+
+.item {
+  @include flex(center, center);
+
+  border-left: 2px solid var(--color-dark);
+  transition: var(--default-transition);
+  min-width: 120px;
+  height: 100%;
+  font-size: 14px;
+  text-align: center;
+
+  &.active {
+    color: var(--color-accent);
+  }
+}
+
+//:global {
+//
+//  .active {
+//    color: var(--color-accent);
+//  }
+//}

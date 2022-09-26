@@ -1,0 +1,89 @@
+@import "../../../scss/config";
+
+.block {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  align-items: stretch;
+  background-color: var(--color-light-900);
+  position: relative;
+  height: 104px;
+  font-weight: var(--typography-bold);
+
+  &:hover {
+
+    .triangle {
+      opacity: 1;
+    }
+
+    .cell {
+
+      &:nth-child(1) {
+        background-color: var(--color-secondary);
+      }
+
+      &:nth-child(2) {
+        background-color: var(--color-dark);
+      }
+    }
+
+    .id {
+      opacity: 0;
+    }
+
+    .name {
+      color: var(--color-secondary);
+    }
+  }
+}
+
+.id,
+.smile,
+.triangle,
+.cell {
+  transition: var(--default-transition);
+}
+
+.smile,
+.triangle {
+  opacity: 0;
+}
+
+.cell {
+  @include flex($align-items: center);
+
+  position: relative;
+  transition: var(--default-transition);
+
+
+  &.center {
+    justify-content: center;
+  }
+
+  &:nth-child(1) {
+    border-right: 2px solid var(--color-dark);
+  }
+
+  &:nth-child(2) {
+    @include make-spacer('pl', 8);
+    @include make-spacer('pr', 30);
+  }
+}
+
+.id {
+  font-size: 14px;
+}
+
+.smile {
+  @include make-spacer('ml', 4);
+}
+
+.triangle {
+
+  &.sm {
+    @include absolute-center;
+  }
+
+  &.lg {
+    @include absolute-center-right(40px);
+  }
+}

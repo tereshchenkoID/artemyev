@@ -1,0 +1,51 @@
+@import "../../scss/config";
+
+.block {
+  @include flex($align-items: center);
+
+  position: relative;
+  overflow: hidden;
+  height: calc(100vh - var(--nav-height));
+  max-height: 816px;
+  background-color: #232323;
+
+  &::after,
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(35, 35, 35, 0.15) 0%, rgba(35, 35, 35, 0) 100%);
+    filter: blur(2px);
+    width: 314px;
+    z-index: 2;
+    content: '';
+  }
+
+  &::after {
+    left: 0;
+  }
+
+  &::before {
+    right: 0;
+    transform: scaleX(-1);
+  }
+}
+
+.logo {
+  @include size(355px, 235px);
+
+  position: absolute;
+  top: 90px;
+  left: 55px;
+}
+
+.pattern {
+
+  &.top {
+    @include absolute-filled;
+  }
+
+  &.bottom {
+    @include absolute-center;
+  }
+}

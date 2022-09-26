@@ -1,0 +1,14 @@
+@import "../../scss/config";
+
+.block {
+  @include size(46px);
+  @include flex(center, center);
+
+  border: 2px solid var(--color-dark);
+  border-radius: 15px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--color-dark);
+  }
+}

@@ -1,0 +1,16 @@
+@import "../../scss/config";
+
+.block {
+  @include flex($align-items: center);
+}
+
+.icon {
+  @include make-spacer('mr', 4);
+  @include size(28px);
+}
+
+.text {
+  font-size: 12px;
+  font-weight: var(--typography-bold);
+  color: var(--color-white);
+}

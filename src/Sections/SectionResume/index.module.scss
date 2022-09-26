@@ -1,0 +1,60 @@
+@import "../../scss/config";
+
+.block {
+  display: grid;
+  grid-template-columns: 1fr 676px;
+  position: relative;
+  background-color: var(--color-light-900);
+}
+
+.left {
+  border-right: 2px solid var(--color-dark);
+}
+
+.subtitle {
+  @include make-spacer('pr', 5);
+
+  display: grid;
+  grid-template-columns: 65px 1fr 86px;
+  align-items: stretch;
+  border-top: 2px solid var(--color-dark);
+  border-bottom: 2px solid var(--color-dark);
+  height: 104px;
+
+  div {
+    @include flex($align-items: center);
+
+    &:nth-child(1) {
+      justify-content: center;
+      background-color: var(--color-secondary);
+      border-right: 2px solid var(--color-dark);
+    }
+
+    &:nth-child(2) {
+      @include make-spacer('pl', 3);
+    }
+  }
+}
+
+.head {
+  @include flex($align-items: center);
+  @include make-spacer('px', 11);
+
+  background-color: var(--color-dark);
+  height: 68px;
+  color: var(--color-accent);
+}
+
+.body {
+  @include make-spacer('pl', 13);
+  @include make-spacer('pr', 10);
+  @include make-spacer('py', 7);
+}
+
+.list {
+  @include flex($wrap: wrap);
+}
+
+.item {
+  @include make-spacer('m', 2);
+}

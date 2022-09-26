@@ -1,0 +1,14 @@
+@import "../scss/config";
+
+.block {
+  @include make-spacer('mx', auto);
+
+  display: grid;
+  grid-template-columns: 128px 1fr 128px;
+  max-width: var(--max-width);
+}
+
+.decor {
+  border-left: 2px solid var(--color-dark);
+  border-right: 2px solid var(--color-dark);
+}

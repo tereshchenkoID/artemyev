@@ -1,0 +1,39 @@
+@import "../../scss/config";
+
+.block {
+  @include flex($align-items: center);
+
+  position: sticky;
+  top: 0;
+  background-color: var(--color-accent);
+  border-top: 2px solid var(--color-dark);
+  border-bottom: 2px solid var(--color-dark);
+  height: var(--nav-height);
+  z-index: 11;
+}
+
+.wrapper {
+  @include flex(space-between, stretch);
+  @include size(100%);
+}
+
+.cell {
+  @include flex(center, center);
+
+  flex-shrink: 0;
+
+  &:nth-child(1) {
+    width: 275px;
+    border-right: 2px solid var(--color-dark);
+  }
+
+  &:nth-child(2) {
+    @include make-spacer('mr', auto);
+
+    width: 165px;
+  }
+}
+
+.logo {
+  @include flex(center, center);
+}

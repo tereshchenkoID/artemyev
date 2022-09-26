@@ -1,0 +1,76 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  @include smooth-font;
+
+  background-color: var(--color-light);
+  min-width: var(--min-width);
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  color: var(--color-text);
+  line-height: var(--line-height);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  font-weight: var(--typography-regular);
+  text-transform: uppercase;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-corner {
+    background-color: #474747;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: 2px solid transparent;
+    border-radius: 19px;
+    background-clip: content-box;
+    background-color: #888;
+  }
+
+  &::-webkit-scrollbar-track {
+    border: 1px solid #373737;
+    background-color: #474747;
+  }
+}
+
+button {
+  @include reset-button;
+}
+
+a {
+  @include transition(all);
+
+  cursor: pointer;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+p {
+  @include make-spacer(m, 0);
+  @include make-spacer(p, 0);
+}
+
+picture,
+svg,
+img {
+  display: block;
+}
+
+picture,
+img {
+  @include size(100%);
+
+  object-fit: contain;
+  object-position: center;
+}
+
+section {
+  overflow: hidden;
+}

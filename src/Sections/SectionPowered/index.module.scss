@@ -1,0 +1,11 @@
+@import "../../scss/config";
+
+.block {
+  position: relative;
+  border-top: 2px solid var(--color-dark);
+  height: 196px;
+}
+
+.decor {
+  @include absolute-filled;
+}

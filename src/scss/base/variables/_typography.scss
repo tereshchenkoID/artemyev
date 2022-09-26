@@ -1,0 +1,42 @@
+:root {
+  --font-size: 16px;
+  --font-family: 'Syncopate', sans-serif;
+
+  --line-height: 1.5;
+
+  --typography-regular: 400;
+  --typography-bold: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  color: var(--color-title);
+  font-family: var(--font-family);
+  font-weight: var(--typography-bold);
+  line-height: 1.2;
+}
+
+$title-size: (
+  '1': 80px,
+  '2': 70px,
+  '3': 50px,
+  '4': 40px,
+  '5': 30px,
+  '6': 20px
+);
+
+@each $index, $status in $title-size {
+
+  h#{$index} {
+    //font-size: $status - ($status * 30 / 100);
+
+    @include media-breakpoint-up(sm) {
+      font-size: $status;
+    }
+  }
+}
