@@ -7,6 +7,14 @@
   background-color: var(--color-light-900);
 }
 
+.smile,
+.preview,
+.stars,
+.label,
+.watermark {
+  position: absolute;
+}
+
 .left {
   border-right: 2px solid var(--color-dark);
 }
@@ -66,7 +74,6 @@
 .watermark {
   @include size(170px);
 
-  position: absolute;
   top: -115px;
   right: 86px;
 }
@@ -75,13 +82,6 @@
   @include make-spacer('p', 10);
 
   position: relative;
-}
-
-.smile,
-.preview,
-.stars,
-.label {
-  position: absolute;
 }
 
 .smile,
@@ -120,6 +120,13 @@
   @include size(100%);
 
   border: 2px solid var(--color-dark);
+
+  img {
+    @include size(100%);
+
+    display: block;
+    object-fit: cover;
+  }
 }
 
 :global {
