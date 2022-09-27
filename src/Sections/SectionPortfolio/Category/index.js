@@ -22,7 +22,7 @@ const Category = ({id, text, url}) => {
              <h4 className={styles.name}>{text}</h4>
              <span className={styles.smile}>
                  <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <ellipse cx="15.6786" cy="15.4691" rx="14.4691" ry="14.3214" transform="rotate(90 15.6786 15.4691)" fill="#DCF26C" stroke="#24262D" stroke-width="2"/>
+                     <ellipse cx="15.6786" cy="15.4691" rx="14.4691" ry="14.3214" transform="rotate(90 15.6786 15.4691)" fill="#DCF26C" stroke="#24262D" strokeWidth="2"/>
                      <ellipse cx="11.7453" cy="13.2987" rx="3.25554" ry="1.49284" transform="rotate(90 11.7453 13.2987)" fill="#23262D"/>
                      <ellipse cx="19.2844" cy="13.2987" rx="3.25554" ry="1.49284" transform="rotate(90 19.2844 13.2987)" fill="#23262D"/>
                      <path d="M6.63519 16.5543C7.64803 25.6318 22.4065 26.7525 24.7215 16.5543" stroke="#23262D" strokeWidth="2"/>

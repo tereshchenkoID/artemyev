@@ -6,9 +6,16 @@
   display: grid;
   grid-template-columns: 128px 1fr 128px;
   max-width: var(--max-width);
+  min-height: 100vh;
 }
 
 .decor {
+  position: relative;
   border-left: 2px solid var(--color-dark);
   border-right: 2px solid var(--color-dark);
+  overflow: hidden;
+
+  svg {
+    @include absolute-filled;
+  }
 }

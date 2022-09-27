@@ -10,14 +10,18 @@ import Header from "../Sections/Header";
 import Footer from "../Sections/Footer";
 import SectionPowered from "../Sections/SectionPowered";
 
+import DecorLeft from './DecorLeft'
+import DecorRight from './DecorRight'
+
 function Index() {
   return (
     <main className={styles.block}>
-      <div className={styles.decor}>1</div>
+      <div className={styles.decor}>
+          <DecorLeft />
+      </div>
       <div>
         <Nav/>
         <Header/>
-
         <Suspense
           fallback={
             <div>Preloader</div>
@@ -28,7 +32,9 @@ function Index() {
         <SectionPowered />
         <Footer />
       </div>
-      <div className={styles.decor}>2</div>
+      <div className={styles.decor}>
+          <DecorRight />
+      </div>
     </main>
   );
 }

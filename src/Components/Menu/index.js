@@ -32,16 +32,6 @@ const Menu = ({data, action}) => {
           </AnchorLink>
           <AnchorLink
               href={`#section-2`}
-              className={classes(styles.item, active === 2 && styles.active)}
-              onClick={() => {
-                  action(!data)
-                  setActive(2)
-              }}
-          >
-              Resume
-          </AnchorLink>
-          <AnchorLink
-              href={`#section-3`}
               className={classes(styles.item, active === 3 && styles.active)}
               onClick={() => {
                   action(!data)

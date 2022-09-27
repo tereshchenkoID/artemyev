@@ -34,33 +34,35 @@ const SectionPortfolio = () => {
               <p>Categories</p>
               <TextDecor text={'we get positive emotions'}/>
           </p>
-          <div className={styles.item}>
-              <Category
-                id={'01'}
-                text={'logo design'}
-                url={'0'}
-              />
-          </div>
-          <div className={styles.item}>
-              <Category
-                  id={'02'}
-                  text={'3d art'}
-                  url={'1'}
-              />
-          </div>
-          <div className={styles.item}>
-              <Category
-                  id={'03'}
-                  text={'vector illustration'}
-                  url={'2'}
-              />
-          </div>
-          <div className={styles.item}>
-              <Category
-                  id={'04'}
-                  text={'esport'}
-                  url={'3'}
-              />
+          <div className={styles.list}>
+              <div className={styles.item}>
+                  <Category
+                      id={'01'}
+                      text={'logo design'}
+                      url={'0'}
+                  />
+              </div>
+              <div className={styles.item}>
+                  <Category
+                      id={'02'}
+                      text={'3d art'}
+                      url={'1'}
+                  />
+              </div>
+              <div className={styles.item}>
+                  <Category
+                      id={'03'}
+                      text={'vector illustration'}
+                      url={'2'}
+                  />
+              </div>
+              <div className={styles.item}>
+                  <Category
+                      id={'04'}
+                      text={'esport'}
+                      url={'3'}
+                  />
+              </div>
           </div>
           <div className={styles.footer}>
               <div className={styles.pattern}>
