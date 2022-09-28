@@ -110,10 +110,13 @@
 }
 
 .label {
-  top: 100px;
-  right: 0;
-  bottom: 110px;
-  left: 20px;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+
+  svg {
+    height: 905px;
+  }
 }
 
 .slider {
